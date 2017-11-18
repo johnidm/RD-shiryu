@@ -10,7 +10,7 @@ declare var Seyia: any;
 export class ContactComponent {
 
   doSubmit(form) {
-    Seyia.setEmail(form.email);
+    Seyia().setEmail(form.email);
   }
 
 }

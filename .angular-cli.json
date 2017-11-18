@@ -22,7 +22,7 @@
         "styles.css"
       ],
       "scripts": [
-        
+        "assets/seyia/seyia.mim.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {

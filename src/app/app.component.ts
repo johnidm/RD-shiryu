@@ -16,7 +16,7 @@ export class AppComponent {
 
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
-        Seyia.trackUrl(window.location.href);
+        Seyia().storeUrl(window.location.href);
       }
     });
   }
