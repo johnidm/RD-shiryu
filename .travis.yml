@@ -15,5 +15,5 @@ jobs:
       deploy: &heroku
         provider: heroku
         app: rd-shiryu
-        api_key: 48b9b33c-9a95-43a9-9246-0cc2d58d024f
+        api_key: $HEROKU_API_KEY
       if: branch = master

@@ -362,7 +362,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var PriceComponent = (function () {
     function PriceComponent(titleService) {
         this.titleService = titleService;
-        this.titleService.setTitle('Price');
+        this.titleService.setTitle('Home');
     }
     PriceComponent.prototype.ngOnInit = function () {
     };
