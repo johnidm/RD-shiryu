@@ -22,7 +22,7 @@
         "styles.css"
       ],
       "scripts": [
-        "/Users/Computer/Projects/RD/seiya/poc/index.js"
+        
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {
