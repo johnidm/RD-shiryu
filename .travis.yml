@@ -9,3 +9,4 @@ jobs:
   include:
     - stage: test
       script: npm run lint
+      script: npm run test-ci
