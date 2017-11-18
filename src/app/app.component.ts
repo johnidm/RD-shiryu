@@ -12,11 +12,11 @@ declare var Seyia: any;
 
 export class AppComponent {
   public constructor(private titleService: Title, private router: Router ) {
-    this.titleService.setTitle( 'Shiryu' );
+    this.titleService.setTitle( 'Home' );
 
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
-        Seyia.trackUrl(window.location.href);
+        Seyia().storeUrl(window.location.href);
       }
     });
   }

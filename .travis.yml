@@ -10,3 +10,10 @@ jobs:
     - stage: test
       script: npm run lint
       script: npm run test-ci
+    - stage: deploy to production
+      script: skip
+      deploy: &heroku
+        provider: heroku
+        app: rd-shiryu
+        api_key: 48b9b33c-9a95-43a9-9246-0cc2d58d024f
+      if: branch = master
