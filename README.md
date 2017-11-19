@@ -1,5 +1,7 @@
 # Shiryu
 
+![](https://pm1.narvii.com/6394/9fab4968b6f5af00f4d7ec039a64f76be3291753_128.jpg)
+
 Sass application that uses the library [Seyia](https://github.com/johnidm/RD-seiya).
 
 [![Build Status](https://travis-ci.org/johnidm/RD-shiryu.svg?branch=master)](https://travis-ci.org/johnidm/RD-shiryu)
