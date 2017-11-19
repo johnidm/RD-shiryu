@@ -81,7 +81,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<div style=\"text-align:center\">\n  <h1>User tracking</h1>\n  <nav>\n    <a routerLink=\"/home\" routerLinkActive=\"active\">Home</a>\n    <a routerLink=\"/price\" routerLinkActive=\"active\">Price</a>\n    <a routerLink=\"/contact\" routerLinkActive=\"active\">Contact</a>\n  </nav>\n\n  <router-outlet></router-outlet>\n  \n</div>\n"
+module.exports = "<div style=\"text-align:center;margin-top:50px\">\n\n  <div class=\"pure-g\">\n\n    <div class=\"pure-u-5-5\">\n    <div class=\"pure-menu pure-menu-horizontal\">\n    \n      <ul class=\"pure-menu-list\">\n        <li class=\"pure-menu-item\">\n          <a routerLink=\"/home\" routerLinkActive=\"active\">Home</a>\n        </li>\n        <li class=\"pure-menu-item\">\n          <a routerLink=\"/price\" routerLinkActive=\"active\">Price</a>\n        </li>\n        <li class=\"pure-menu-item\">\n          <a routerLink=\"/contact\" routerLinkActive=\"active\">Contact</a>\n        </li>\n      </ul>\n    </div>\n\n    </div>\n    <hr>\n    <div class=\"pure-u-5-5\">\n      <div class=\"content\">\n        <router-outlet></router-outlet>\n      </div>\n    </div>\n  </div>\n\n</div>"
 
 /***/ }),
 
@@ -172,7 +172,7 @@ var AppModule = (function () {
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
                 __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormsModule */],
-                __WEBPACK_IMPORTED_MODULE_6__app_routing_module__["a" /* AppRoutingModule */]
+                __WEBPACK_IMPORTED_MODULE_6__app_routing_module__["a" /* AppRoutingModule */],
             ],
             providers: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["b" /* Title */]
@@ -208,7 +208,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/contact/contact.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<form #f=\"ngForm\">\n    <input type=\"email\" name=\"email\" ngModel email>\n    <button type=\"button\" (click)='doSubmit(f.value)'>Send</button>\n</form>"
+module.exports = "<form #f=\"ngForm\" class=\"pure-form pure-form-aligned\" (ngSubmit)=\"doSubmit(f)\">\n    <div class=\"pure-control-group\">\n        <input type=\"email\" placeholder=\"Email Address\" name=\"email\" ngModel [email]=\"true\">\n    </div>\n\n    <button class=\"pure-button pure-button-primary\" type=\"submit\" [disabled]=\"!f.form.valid\">Send</button>\n</form>\n"
 
 /***/ }),
 
@@ -236,7 +236,7 @@ var ContactComponent = (function () {
         this.titleService.setTitle('Contact');
     }
     ContactComponent.prototype.doSubmit = function (form) {
-        Seyia().setEmail(form.email);
+        Seyia().setEmail(form.value.email);
     };
     ContactComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["n" /* Component */])({
@@ -274,7 +274,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/home/home.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  home works!\n</p>\n"
+module.exports = "<p>\n  Welcome to Home page\n</p>\n"
 
 /***/ }),
 
@@ -324,7 +324,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, "ul {\n    list-style-position: inside;\n    padding-left:0;\n    list-style:none;\n}", ""]);
 
 // exports
 
@@ -337,7 +337,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/price/price.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  price works!\n</p>\n"
+module.exports = "\n    <div>\n      <h2>Personal</h2>\n  \n      <span>\n        $5 <span>per month</span>\n      </span>\n    </div>\n  \n    <ul class=\"pricing-table-list\">\n      <li>Free setup</li>\n      <li>Custom sub-domain</li>\n      <li>Standard customer support</li>\n      <li>1GB file storage</li>\n      <li>1 database</li>\n      <li>Unlimited bandwidth</li>\n    </ul>\n  "
 
 /***/ }),
 
@@ -362,7 +362,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var PriceComponent = (function () {
     function PriceComponent(titleService) {
         this.titleService = titleService;
-        this.titleService.setTitle('Home');
+        this.titleService.setTitle('Price');
     }
     PriceComponent.prototype.ngOnInit = function () {
     };
