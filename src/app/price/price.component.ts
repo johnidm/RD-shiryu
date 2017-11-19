@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class PriceComponent implements OnInit {
 
   constructor(private titleService: Title) {
-    this.titleService.setTitle('Home');
+    this.titleService.setTitle('Price');
   }
 
   ngOnInit() {

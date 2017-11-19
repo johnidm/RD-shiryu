@@ -1,6 +1,6 @@
 # Shiryu
 
-Sass application that uses the library [Seyai](https://github.com/johnidm/RD-seiya)
+Sass application that uses the library [Seyia](https://github.com/johnidm/RD-seiya).
 
 [![Build Status](https://travis-ci.org/johnidm/RD-shiryu.svg?branch=master)](https://travis-ci.org/johnidm/RD-shiryu)
 
@@ -8,6 +8,8 @@ Sass application that uses the library [Seyai](https://github.com/johnidm/RD-sei
 
 Commands:
 
-- `npm start`: Start application
-- `npm test`: Run all tests
-- `npm run build`: Build application
+- `npm start`: Start application.
+- `npm test`: Run all tests.
+- `npm run build`: Build application.
+
+

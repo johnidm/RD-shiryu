@@ -1,4 +1,7 @@
-<form #f="ngForm">
-    <input type="email" name="email" ngModel email>
-    <button type="button" (click)='doSubmit(f.value)'>Send</button>
+<form #f="ngForm" class="pure-form pure-form-aligned" (ngSubmit)="doSubmit(f)">
+    <div class="pure-control-group">
+        <input type="email" placeholder="Email Address" name="email" ngModel [email]="true">
+    </div>
+
+    <button class="pure-button pure-button-primary" type="submit" [disabled]="!f.form.valid">Send</button>
 </form>

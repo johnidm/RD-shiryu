@@ -15,7 +15,7 @@ export class ContactComponent {
   }
 
   doSubmit(form) {
-    Seyia().setEmail(form.email);
+    Seyia().setEmail(form.value.email);
   }
 
 }
